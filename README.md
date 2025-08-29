@@ -64,8 +64,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Your Name - your.email@example.com
-Project Link: https://github.com/yourusername/NetworkAnomalyDetector
+Your Name - [Avishka Gamage](avishkagamage977@gmail.com) 
+Project Link:[ https://github.com/yourusername/NetworkAnomalyDetector](https://github.com/Avishka-Gamage/Network-Anomaly-Detection.git)
 
 ## Datasets
 
