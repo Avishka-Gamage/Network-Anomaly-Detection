@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Anomaly Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h2>Network Anomaly Detector</h2>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Upload PCAP File</h1>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="pcap" accept=".pcap" required>
+            <br>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Avishka Gamage | Final Year Project</p>
+    </footer>
+</body>
+</html>

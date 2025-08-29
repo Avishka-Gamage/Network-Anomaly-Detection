@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h2>Network Anomaly Detector</h2>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Analysis Results</h1>
+        <p class="result">Total flows analyzed: {{ total }}</p>
+        <p class="result">Anomalies detected: {{ anomalies }}</p>
+
+        <canvas id="anomalyChart" width="400" height="300"></canvas>
+
+        <br>
+        <a href="/">Upload another file</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Avishka Gamage | Final Year Project</p>
+    </footer>
+
+    <script>
+        const ctx = document.getElementById('anomalyChart').getContext('2d');
+        const anomalyChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Normal', 'Anomaly'],
+                datasets: [{
+                    label: '# of Flows',
+                    data: [{{ total - anomalies }}, {{ anomalies }}],
+                    backgroundColor: ['#28a745', '#dc3545']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    title: { display: true, text: 'Flow Analysis Summary' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
