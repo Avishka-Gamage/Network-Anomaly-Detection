@@ -63,7 +63,7 @@ Edit `config.yaml` to customize:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
-
+    
 Your Name - [Avishka Gamage](avishkagamage977@gmail.com) 
 Project Link:[ https://github.com/yourusername/NetworkAnomalyDetector](https://github.com/Avishka-Gamage/Network-Anomaly-Detection.git)
 
